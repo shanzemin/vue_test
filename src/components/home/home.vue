@@ -1,11 +1,25 @@
 <template>
-  <div>
-    <span>
-      欢迎用户{{username}}访问
-    </span>
-  <el-row>
-    <el-button type="warning" @click="logout()" plain>注销</el-button>
-  </el-row>
+  <div class="div">
+    <el-container class="test">
+      <el-header class="el-header">
+        <ul>
+          <li>
+            欢迎用户：{{username}}
+          </li>
+          <li>
+            <span>2019-12-14 星期六</span>
+            <span>注销</span>
+          </li>
+        </ul>
+      </el-header>
+      <el-container>
+        <el-aside width="200px">Aside</el-aside>
+        <el-container>
+          <el-main>Main</el-main>
+          <el-footer>Footer</el-footer>
+        </el-container>
+      </el-container>
+    </el-container>
   </div>
 </template>
 
@@ -16,7 +30,7 @@ export default {
       username: ''
     }
   },
-  mounted(){
+  mounted() {
     this.me()
   },
   methods: {
@@ -35,3 +49,15 @@ export default {
   }
 }
 </script>
+
+<style>
+  .el-header {
+    background: #1cbc9c;
+  }
+  .div {
+    width: 100%;
+  }
+  .test {
+    border: 1px solid red;
+  }
+</style>
