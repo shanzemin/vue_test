@@ -55,7 +55,6 @@ export default {
     };
 
     var checkAge = (rule, value, callback) => {
-      value = value.trim();
       if (!value) {
         return callback(new Error("年龄不能为空"));
       }
